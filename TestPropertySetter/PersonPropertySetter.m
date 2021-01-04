@@ -30,15 +30,17 @@
 
 - (void)setName1:(PersonSetter *)name1 {
     [self printRetainCount:_name1 obj2:name1];
+    [name1 retain];
     [_name1 release];
-    _name1 = [name1 retain];
+    _name1 = name1;
     [self printRetainCount:_name1 obj2:name1];
 }
 
 - (void)setName2:(PersonSetter *)name2 {
     [self printRetainCount:_name2 obj2:name2];
+    [name2 retain];
     [_name2 release];
-    _name2 = [name2 retain];
+    _name2 = name2;
     [self printRetainCount:_name2 obj2:name2];
 }
 
@@ -50,8 +52,9 @@
 
 - (void)setName4:(PersonSetter *)name4 {
     [self printRetainCount:_name4 obj2:name4];
+    [name4 copy];
     [_name4 release];
-    _name4 = [name4 copy];
+    _name4 = name4;
     [self printRetainCount:_name4 obj2:name4];
 }
 
