@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PersonPropertySetter : NSObject
 
 @property (nonatomic, assign)   float weight;
+@property (nonatomic, unsafe_unretained) float height;
+
+@property (nonatomic, unsafe_unretained) PersonSetter *name0;
 @property (nonatomic, assign)   PersonSetter *name;
 
 @property (nonatomic, retain)   PersonSetter *name1;
