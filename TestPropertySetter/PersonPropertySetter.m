@@ -9,6 +9,10 @@
 
 @implementation PersonPropertySetter
 
+/*
+ xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m
+ */
+
 -(void)dealloc {
     [super dealloc];
     NSLog(@"%@ dealloc",NSStringFromClass(self.class));
