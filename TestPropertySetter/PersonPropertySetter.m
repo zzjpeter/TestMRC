@@ -10,7 +10,7 @@
 @implementation PersonPropertySetter
 
 -(void)dealloc {
-    //[super dealloc];
+    [super dealloc];
     NSLog(@"%@ dealloc",NSStringFromClass(self.class));
 }
 
@@ -26,25 +26,28 @@
 
 - (void)setName1:(PersonSetter *)name1 {
     [self printRetainCount:_name1 obj2:name1];
-    _name1 = name1;
+    [_name1 release];
+    _name1 = [name1 retain];
     [self printRetainCount:_name1 obj2:name1];
 }
 
 - (void)setName2:(PersonSetter *)name2 {
     [self printRetainCount:_name2 obj2:name2];
-    _name2 = name2;
+    [_name2 release];
+    _name2 = [name2 retain];
     [self printRetainCount:_name2 obj2:name2];
 }
 
 - (void)setName3:(PersonSetter *)name3 {
     [self printRetainCount:_name3 obj2:name3];
-    _name3 = name3;
+    _name3 = name3;//测试发现weak属性设置的retainCount参数异常【注意：MRC下不支持weak的 不知道是不是这个导致的】
     [self printRetainCount:_name3 obj2:name3];
 }
 
 - (void)setName4:(PersonSetter *)name4 {
     [self printRetainCount:_name4 obj2:name4];
-    _name4 = name4;
+    [_name4 release];
+    _name4 = [name4 copy];
     [self printRetainCount:_name4 obj2:name4];
 }
 

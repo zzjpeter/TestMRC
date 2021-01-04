@@ -10,8 +10,12 @@
 @implementation PersonSetter
 
 -(void)dealloc {
-    //[super dealloc];
+    [super dealloc];
     NSLog(@"%@ dealloc",NSStringFromClass(self.class));
+}
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    return [[PersonSetter alloc] init];
 }
 
 @end

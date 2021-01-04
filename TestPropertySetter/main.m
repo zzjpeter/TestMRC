@@ -11,13 +11,19 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         PersonPropertySetter *person = [[PersonPropertySetter alloc] init];
-        //[person release];
-        //PersonSetter *name = [[PersonSetter alloc] init];
-//        NSLog(@"person:%ld####name:%ld##person.name:%ld",person.retainCount,name.retainCount,person.name.retainCount);
-//        //person.name = name;
-//        NSLog(@"person:%ld####name:%ld##person.name:%ld",person.retainCount,name.retainCount,person.name.retainCount);
-//        [person release];
-//        NSLog(@"person:%ld####name:%ld##person.name:%ld",person.retainCount,name.retainCount,person.name.retainCount);
+        PersonSetter *name4 = [[PersonSetter alloc] init];
+    
+        NSLog(@"person:%ld####name4:%ld##person.name4:%ld",person.retainCount,name4.retainCount,person.name4.retainCount);
+        person.name4 = name4;
+        NSLog(@"person:%ld####name4:%ld##person.name4:%ld",person.retainCount,name4.retainCount,person.name4.retainCount);
+        
+        [name4 release];
+        NSLog(@"person:%ld####name4:%ld##person.name4:%ld",person.retainCount,name4.retainCount,person.name4.retainCount);
+        
+        [person release];
+        
+        //NSLog(@"person:%ld####name4:%ld##person.name4:%ld",person.retainCount,name4.retainCount,person.name4.retainCount);
+        
     }
     NSLog(@"end");
     return 0;
