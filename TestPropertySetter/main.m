@@ -6,11 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersonPropertySetter.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        PersonPropertySetter *person = [[PersonPropertySetter alloc] init];
+        //[person release];
+        //PersonSetter *name = [[PersonSetter alloc] init];
+//        NSLog(@"person:%ld####name:%ld##person.name:%ld",person.retainCount,name.retainCount,person.name.retainCount);
+//        //person.name = name;
+//        NSLog(@"person:%ld####name:%ld##person.name:%ld",person.retainCount,name.retainCount,person.name.retainCount);
+//        [person release];
+//        NSLog(@"person:%ld####name:%ld##person.name:%ld",person.retainCount,name.retainCount,person.name.retainCount);
     }
+    NSLog(@"end");
     return 0;
 }

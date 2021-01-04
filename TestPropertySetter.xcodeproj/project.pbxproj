@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		478A4CF125A30412009F7081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A4CF025A30412009F7081 /* main.m */; };
+		478A4CFA25A3047F009F7081 /* PersonPropertySetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A4CF825A3047F009F7081 /* PersonPropertySetter.m */; };
+		478A4D0625A310E0009F7081 /* PersonSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A4D0525A310E0009F7081 /* PersonSetter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		478A4CED25A30412009F7081 /* TestPropertySetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestPropertySetter; sourceTree = BUILT_PRODUCTS_DIR; };
 		478A4CF025A30412009F7081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		478A4CF825A3047F009F7081 /* PersonPropertySetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonPropertySetter.m; sourceTree = "<group>"; };
+		478A4CF925A3047F009F7081 /* PersonPropertySetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonPropertySetter.h; sourceTree = "<group>"; };
+		478A4D0225A30E5F009F7081 /* PersonPropertySetter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PersonPropertySetter.cpp; sourceTree = "<group>"; };
+		478A4D0425A310E0009F7081 /* PersonSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSetter.h; sourceTree = "<group>"; };
+		478A4D0525A310E0009F7081 /* PersonSetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSetter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				478A4CF025A30412009F7081 /* main.m */,
+				478A4D0225A30E5F009F7081 /* PersonPropertySetter.cpp */,
+				478A4CF925A3047F009F7081 /* PersonPropertySetter.h */,
+				478A4CF825A3047F009F7081 /* PersonPropertySetter.m */,
+				478A4D0425A310E0009F7081 /* PersonSetter.h */,
+				478A4D0525A310E0009F7081 /* PersonSetter.m */,
 			);
 			path = TestPropertySetter;
 			sourceTree = "<group>";
@@ -118,6 +130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478A4CFA25A3047F009F7081 /* PersonPropertySetter.m in Sources */,
+				478A4D0625A310E0009F7081 /* PersonSetter.m in Sources */,
 				478A4CF125A30412009F7081 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +253,7 @@
 		478A4CF525A30412009F7081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -247,6 +262,7 @@
 		478A4CF625A30412009F7081 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
